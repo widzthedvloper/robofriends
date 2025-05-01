@@ -7,7 +7,7 @@ import 'tachyons';
 // import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import { searchReducer } from './searchFilterReducer';
+import { searchReducer } from './reducers';
 import { createLogger } from 'redux-logger';
 import {thunk} from "redux-thunk"
 
