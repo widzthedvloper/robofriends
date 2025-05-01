@@ -6,11 +6,12 @@ import App from './containers/App';
 import 'tachyons';
 // import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { searchReducer } from './searchFilterReducer';
+import { createLogger } from 'redux-logger';
 
-
-const store = createStore(searchReducer)
+const logger = createLogger();
+const store = createStore(searchReducer, applyMiddleware(logger))
 
 
 
