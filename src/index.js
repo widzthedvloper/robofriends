@@ -9,9 +9,10 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { searchReducer } from './searchFilterReducer';
 import { createLogger } from 'redux-logger';
+import {thunk} from "redux-thunk"
 
 const logger = createLogger();
-const store = createStore(searchReducer, applyMiddleware(logger))
+const store = createStore(searchReducer, applyMiddleware(thunk,logger))
 
 
 
